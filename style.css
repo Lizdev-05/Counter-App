@@ -91,3 +91,66 @@ main{
  font-size: 18px;
  color: rgb(58, 56, 56);
 }
+
+
+@media screen and (max-width: 600px) {
+    .btn-container {
+      width: 100%;
+    }
+  
+    .btn-container .btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10px;
+    }
+    .container {
+      width: 100%;
+    }
+
+    
+    .button-container .decrease {
+        padding: 11px 7px;
+    }
+
+    .button-container .increase {
+        padding: 11px 7px;  
+    }
+
+    .button-container .reset {
+        padding: 11px 10px;  
+    }
+
+    .container p{
+        font-size: 16px;
+    }
+  }
+  
+
+  @media only screen and (max-width: 800px) {
+    .btn-container .btn {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .container {
+      width: 75%;
+    }
+
+    
+    .button-container .decrease {
+        padding: 11px 7px;
+    }
+
+    .button-container .increase {
+        padding: 11px 7px;  
+    }
+
+    .button-container .reset {
+        padding: 11px 10px;  
+    }
+  
+  }
