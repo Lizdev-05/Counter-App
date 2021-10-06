@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="header">My Counter</h1>
+            <span class="value">0</span>
+       
+
+        <div class="button-container">
+            <button class="btn decrease">decrease</button>
+            <button class="btn reset">reset</button>
+            <button class="btn increase">increase</button>
+        </div>
+
+        <p class="author"> Designed By : Oyinlade Ojesanmi</p>
+
+    </div>
+    </main>
+</body>
+
+
+
+<script>
+  
+    const btns = document.querySelectorAll(".btn");
+    const value = document.querySelector(".value");
+    const header = document.querySelector(".header");
+
+    let count = 0;
+    btns.forEach((btn) => {
+        btn.addEventListener ("click",Actions)
+    });
+
+    function Actions(e){
+        const styles = e.currentTarget.classList;
+
+        if (styles.contains("increase")) {
+            // if (count < 100)
+            count++;
+        } else if (styles.contains("decrease")) {
+            // if (count >= 1)
+            count--;
+        } else {
+            count = 0;
+        }
+
+        if (count < 0) {
+            value.style.color = "Purple";
+            header.style.color = "Purple";
+        } if (count > 0) {
+            value.style.color = "green";
+            header.style.color = "green";
+        } else if (count === 0){
+            value.style.color = "blue";
+            header.style.color = "blue";
+        }
+        value.textContent = count;
+    } 
+   
+
+
+</script>
+</html>
